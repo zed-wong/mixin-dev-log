@@ -55,7 +55,7 @@ debt = compound(event_debt, event_days, interest_rate)
 
 ---
 
-之后发生了一个错误。第3步的响应是一个数组，而我使用数组[0]作为计算的数据源。这很糟糕。当一些不同的动作发生时（如`VatDeposit`和`VatWithdraw`），`dart`和``debt`将为0。 所以计算失败。抵押率将被显示为0。
+之后发生了一个错误。第3步的响应是一个数组，而我使用数组[0]作为计算的数据源。这很糟糕。当一些不同的动作发生时（如`VatDeposit`和`VatWithdraw`），`dart`和`debt`将为0。 所以计算失败。抵押率将被显示为0。
 
 为了避免这种情况，不要只使用数组[0]，找到最新的不等于0的`dart` 和`debt`，用它们来计算。然后根据`action`（`VatDeposit == +` , `VatWithDraw == -`）将`dink`与`ink`加减。
 
