@@ -21,4 +21,4 @@ Bot->user: yyy
 Bot->user: message id 4 (quote 1)
 ```
 
-![how-customer-service-works](/home/whoami/dev/mixin-dev-log/MixinBot/how-customer-service-works.png)
+![how-customer-service-works](how-customer-service-works.png)
