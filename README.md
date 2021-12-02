@@ -1,5 +1,6 @@
 
-| Wrote about some problems I have solved to save others time
+# mixin-dev-log
+> Just wrote about some problems I have solved to save others time
 
 Mixin Bots
 - [Reply message to user from bot](MixinBot/CustomerService.md)
