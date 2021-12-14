@@ -5,6 +5,8 @@
 Mixin Bots
 - [Reply message to user from bot](MixinBot/CustomerService.md)
 
+- [Basic Bot template](MixinBot/basicBotTemplate.go)
+
 Pando Leaf
 - Calculate Pando Leaf vault's current ratio
     - [Calculate Pando Leaf vault's current ratio](PandoLeaf/calculate-vault-current-ratio.md)
