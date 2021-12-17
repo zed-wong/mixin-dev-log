@@ -12,6 +12,7 @@
 # 0. Change mixincliPATH, botConfigPATH, mvmPATH, mvmCONF to your own.
 #    - mixincliPATH:  PATH of mixin-cli
 #    - botConfigPATH: PATH of your mixin bot
+#      (Don't forget to transfer some cnb to this bot)
 #    - mvmPATH:       PATH of mvm
 #    - mvmCONF:       PATH of mvm config (config.toml)
 #   
