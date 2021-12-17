@@ -1,8 +1,6 @@
-# A script that simplify mvm publishment
-#
 # Requirements: 
 #
-# 1. Unix system
+# 1. unix system
 #
 # 2. mixin-cli and mvm downloaded
 # (https://github.com/fox-one/mixin-cli)
@@ -26,6 +24,7 @@
 import os
 import json
 from sys import argv
+from datetime import datetime
 
 
 mixincliPATH   = "./mixin-cli"
@@ -49,12 +48,16 @@ Usage:
 Flags:
   new                           create a new net user
   publish [ADDRESS] [TX HASH]   publish a contract          
+  invoke  [AMOUNT]              invoke a contract (with cnb and default netuser config)
         """)
 
 elif argv[1] == "new":
     config = os.popen("%s %s user %s"%(mixincliPATH, botConfigPATH, newNetUsername)).read()
 
     # Save net user to file
+    if os.path.isfile(newNetUserFile):
+        name = datetime.now().strftime("%Y-%m-%d-%H:%M:%S")+".json"
+        os.rename(os.getcwd()+"/"+newNetUserFile, os.getcwd()+"/"+name)
     with open(newNetUserFile, "w") as f:
         f.write(config)
         print("Config saved in %s"%(newNetUserFile))
@@ -67,16 +70,33 @@ elif argv[1] == "new":
     print("PID in solidity:",pid)
 
     # Transfer 10 cnb to net user
-    os.popen("%s %s pay %s %s %s -y"%(mixincliPATH, botConfigPATH, uuid, cnbUUID, cnbAMOUNT))
+    pay = os.popen("%s %s pay %s %s %s -y"%(mixincliPATH, botConfigPATH, uuid, cnbUUID, cnbAMOUNT)).read()
+    print(pay)
 
 elif argv[1] == "publish":
     # Publish with contract address and TX hash
     if len(argv) <=2:
         print("Format Error. \n\nFORMAT:\n\tpython3 mvm.py publish [ADDRESS] [TX HASH]")
     elif len(argv[2])==42 and len(argv[3])>0:
-        os.popen("%s publish -m %s -k %s -a %s -e %s"%(mvmPATH, mvmCONF, newNetUserFile, argv[2], argv[3]))
+        result = os.popen("%s publish -m %s -k %s -a %s -e %s"%(mvmPATH, mvmCONF, newNetUserFile, argv[2], argv[3])).read()
+        print(result)
+
         with open(newNetUserFile, "r") as f:
             print("MVMProcessId:",json.loads(f.read())["client_id"])
             print("MVMContractAddress:",argv[2])
     else:
         print("Format Error. \n\nFORMAT:\n\tpython3 mvm.py publish [ADDRESS] [TX HASH]")
+
+elif argv[1] == "invoke":
+    if len(argv) <= 2:
+        print("Format Error. \n\nFORMAT:\n\tpython3 mvm.py invoke [AMOUNT] ")
+
+    elif len(argv) == 3:
+        with open(newNetUserFile, "r") as f:
+            MVMProcessId = json.loads(f.read())["client_id"]
+        result  = os.popen("%s invoke -m %s -k %s -p %s -amount %s -asset %s"%(mvmPATH, mvmCONF, newNetUserFile, MVMProcessId, argv[2], cnbUUID)).read()
+        print(result)
+
+    else:
+        print("Format Error. \n\nFORMAT:\n\tpython3 mvm.py invoke [AMOUNT] ")
+

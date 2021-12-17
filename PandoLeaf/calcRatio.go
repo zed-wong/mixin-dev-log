@@ -11,7 +11,8 @@ var (
         PandoLeafCatsEndpoint="https://leaf-api.pando.im/api/cats"
         PandoLeafOraclesEndpoint="https://leaf-api.pando.im/api/oracles"
         PandoLeafHistoryEndpoint="https://leaf-api.pando.im/api/vats/%s/events"
-	myvaultid = "ca7d8a0f-2c4e-3027-8751-34e2d6abe335"
+//	myvaultid = "ca7d8a0f-2c4e-3027-8751-34e2d6abe335"
+	myvaultid = "8f8f0e19-4630-358c-bbb3-34acf6ea2137"
 )
 
 func calcRatio(vault_id string){
