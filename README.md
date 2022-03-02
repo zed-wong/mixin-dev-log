@@ -3,7 +3,11 @@
 > Just wrote about some problems I have solved to save others time
 
 Mixin Bots
-- [Reply message to user from bot](MixinBot/CustomerService.md)
+
+- Message
+  - [Reply message to user from bot](MixinBot/CustomerService.md)
+- Oauth
+  - [OAuth handler](MixinBot/auth.go)
 
 - [Basic Bot template](MixinBot/basicBotTemplate.md)
 
