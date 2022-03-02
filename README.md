@@ -5,9 +5,9 @@
 Mixin Bots
 
 - Message
-  - [Reply message to user from bot](MixinBot/CustomerService.md)
+  - [Reply message to user from bot](MixinBot/message/CustomerService.md)
 - Oauth
-  - [OAuth handler](MixinBot/auth.go)
+  - [OAuth handler](MixinBot/oauth/auth.go)
 
 - [Basic Bot template](MixinBot/basicBotTemplate.md)
 
