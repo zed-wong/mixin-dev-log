@@ -8,6 +8,9 @@ Mixin Bots
   - [Reply message to user from bot](MixinBot/message/CustomerService.md)
 - Oauth
   - [OAuth handler](MixinBot/oauth/auth.go)
+- Deploy
+  - [mnm](MixinBot/deploy/mnm.md)
+  - [service (Systemd)](MixinBot/deploy/service.md)
 
 - [Basic Bot template](MixinBot/basicBotTemplate.md)
 
