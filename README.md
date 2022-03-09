@@ -2,6 +2,8 @@
 # mixin-dev-log
 > Just wrote about some problems I have solved to save others time
 
+## Summary
+
 Mixin Bots
 
 - Message
@@ -26,3 +28,7 @@ NFT
 MVM
 
 - [A script for dev](MVM/mvm.py)
+
+## Contact
+
+Mixin Messenger: 28865
