@@ -17,9 +17,7 @@ Mixin Bots
 - [Basic Bot template](MixinBot/basicBotTemplate.md)
 
 Pando Leaf
-  - [Calculate Pando Leaf vault's current ratio](PandoLeaf/calculate-vault-current-ratio.md)
-  - [如何计算Pando Leaf金库的抵押率？](PandoLeaf/calculate-vault-current-ratio-zh.md)
-  - [Function in Go](PandoLeaf/calcRatio.go)
+- [Function in Go](PandoLeaf/calcRatio.go)
 
 NFT
 - [Query user's NFT list](NFT/Query-user-NFT-using-Mixin-API.md)
@@ -31,4 +29,4 @@ MVM
 
 ## Contact
 
-Mixin Messenger: 28865
+[Mixin Messenger](https://mixin.one/mm): 28865
