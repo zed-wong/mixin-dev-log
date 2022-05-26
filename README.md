@@ -26,6 +26,7 @@ NFT
 MVM
 
 - [A script for dev](MVM/mvm.py)
+- [Common problems](MVM/mvm.md)
 
 ## Contact
 
