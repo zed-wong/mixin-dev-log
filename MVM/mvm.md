@@ -6,6 +6,8 @@ RegistryContractURL: https://testnet.mvmscan.com/address/0x65ccF8d1B92AfC6aF2915
 
 Toolbox: http://metamask.test.mixinbots.com/
 
+Official documention: https://mvm.dev
+
 ## Invoke with registry contract when error occurs
 
 The registry would refund automaticlly
