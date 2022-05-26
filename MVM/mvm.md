@@ -28,6 +28,14 @@ See: https://github.com/MixinNetwork/bot-api-nodejs-client/blob/main/example/mvm
 
 Or: http://metamask.test.mixinbots.com/ to generate extra.
 
+## Amount correspondence between Mixin asset and MVM asset
+
+In solidity, amount type is: uint256 amount
+
+1 CNB(mixin) = 100000000 (solidity uint256)
+0.00000001(mixin) = 1 (solidity uint256)
+
+
 ## Any other problems?
 
 Find https://github.com/liuzemei (id:30265) or https://github.com/jadeydi (id:493230) in mixin messenger 
