@@ -36,6 +36,24 @@ In solidity, amount type is: uint256 amount
 0.00000001(mixin) = 1 (solidity uint256)
 
 
+## Since mvm contract functions are "public", is it possible for crackers to steal your money?
+
+
+Use msg.sender as the only identifier for your users, and by far I suppose it's safe (I didn't find any vulnerabilities, it's logically correct).
+
+## What happens after I scanned a code and paid?
+
+When you as a mixin messenger user scanned a code that is gonna call registry contract, after you transfered the money to MVM nodes, the procedure would be like:
+(-> == call)
+
+Registry contract -> Your mvm contract address (mixin messenger user address)
+
+Your mvm contract address -> Traget contract address (Address specified in transfer memo)
+
+Traget contract address -> Your mvm contract address (Skip this step if no money was transfered) 
+
+Your mvm contract address -> Registry contract
+
 ## Any other problems?
 
 Find https://github.com/liuzemei (id:30265) or https://github.com/jadeydi (id:493230) in mixin messenger 
