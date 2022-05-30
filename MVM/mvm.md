@@ -60,4 +60,4 @@ Your mvm contract address -> Registry contract
 
 Find https://github.com/liuzemei (id:30265) or https://github.com/jadeydi (id:493230) in mixin messenger 
 
-Join group: https://mixin.one/codes/236792f0-bf56-4067-a174-f29895cb8f5c
+Join group: https://mixin.one/codes/a91c865c-5de7-40c1-a130-f6c92ee89bd7
