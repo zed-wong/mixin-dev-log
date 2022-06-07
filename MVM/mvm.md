@@ -16,8 +16,6 @@ The registry would refund automaticlly
 
 1 satoshi (0.00000001)
 
-It's like nothing will happen when you transfer with this amount of crypto.
-
 ## Extra too long?
 
 See: https://github.com/liuzemei/mvm-mvm/blob/6333798d5c737cdcfb77cc64914deed4ebaad3d6/src/components/mvm/uniswap/swap.vue#L67
@@ -31,6 +29,8 @@ See: https://github.com/MixinNetwork/bot-api-nodejs-client/blob/main/example/mvm
 Or: http://metamask.test.mixinbots.com/ to generate extra.
 
 ## Amount correspondence between Mixin asset and MVM asset
+
+Decimal: 100000000 (8 digits)
 
 In solidity, amount type is: uint256 amount
 
@@ -55,6 +55,18 @@ Your mvm contract address -> Traget contract address (Address specified in trans
 Traget contract address -> Your mvm contract address (Skip this step if no money was transfered) 
 
 Your mvm contract address -> Registry contract
+
+## Possible transaction situations
+
+| Transfer amount        | Usage (call solidity func) | Reaction      | State             | Intro                                                        |
+| ---------------------- | -------------------------- | ------------- | ----------------- | ------------------------------------------------------------ |
+| 0.00000001 (1 satoshi) | Call non-transfer function | Refund anyway | Succeed or Failed | State depends on condition inside the function               |
+| 0.00000001 (1 satoshi) | Call transfer function     | Refund anyway | Failed            | Unspported                                                   |
+| other amount           | Call transfer function     | Depends       | Succeed           | Reaction depends on how function handles the money           |
+| other amount           | Call transfer function     | Refund        | Failed            | Reaction depends on how function handles the money before failed. |
+| other amount           | Call non-transfer function | Refund anyway | Succeed or Failed | State depends on condition inside the function.              |
+
+
 
 ## Any other problems?
 
