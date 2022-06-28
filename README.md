@@ -27,6 +27,8 @@ MVM
 
 - [A script for dev](MVM/mvm.py)
 - [Common problems](MVM/mvm.md)
+- [Call Contract using ethersjs](MVM/call-contract-from-ethersjs.md)
+- [Cross Network Bridge](MVM/cross-chain-bridge.md)
 
 ## Contact
 
