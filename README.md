@@ -10,7 +10,7 @@ Mixin Bots
   - [Reply message to user from bot](MixinBot/message/CustomerService.md)
 - Oauth
   - [OAuth handler](MixinBot/oauth/auth.go)
-  - [SPA OAuth](MixinBot/oauth/SPA-OAUTH.md)
+  - [SPA OAuth](MixinBot/oauth/spa-oauth.md)
 - Deploy
   - [mnm](MixinBot/deploy/mnm.md)
   - [service (Systemd)](MixinBot/deploy/service.md)
