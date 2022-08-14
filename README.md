@@ -23,7 +23,7 @@ Pando Leaf
 NFT
 - [Query user's NFT list](NFT/Query-user-NFT-using-Mixin-API.md)
 - [Mint other kinds of NFTs](NFT/how-to-mint-other-kind-of-NFTs.md)
-- [How to Send NFT through js](NFT/how-to-transfer-nft-through-js.md)
+- [How to transfer NFT through js](NFT/how-to-transfer-nft-through-js.md)
 
 MVM
 

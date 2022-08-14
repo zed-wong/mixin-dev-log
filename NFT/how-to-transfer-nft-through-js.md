@@ -1,6 +1,6 @@
 # How to transfer NFT through javascript (Detailed guide)
 
-Basically, there're 6 steps required to transfer an NFT.
+Basically, there're 5 steps required to transfer an NFT.
 
 1. OAuth user to get user's [JWT token](https://developers.mixin.one/docs/api/oauth)
 
@@ -12,12 +12,12 @@ Basically, there're 6 steps required to transfer an NFT.
 
 For example, there's a function provided in [`mixin-node-sdk`](https://github.com/liuzemei/bot-api-nodejs-client) to generate the `raw`. This [function](https://github.com/liuzemei/bot-api-nodejs-client/blob/main/src/client/collectibles.ts#L68) called `makeCollectibleTransactionRaw`. We can call it like `makeCollectibleTransactionRaw( { output, token, [recipient_user_id], threshold:1 } )`. 
 
-- `output` is from the step 2 
-- `token` is from the step 3 
+- `output` is from step 2 
+- `token` is from step 3 
 - `[recipient_user_id]` is the NFT receiver's user id. `[]` is required because it's an array.
-- `threshold:1` means the NFT is sending to a single person.
+- `threshold:1` means the NFT is sent to a single person.
 
-After calling this function, we will have `raw` generated. Then we can create a transfer(multisig) request.
+After calling this function, we will have `raw` generated. Then we can create a transfer(multi-sig) request.
 
 This way of generating `raw` might not be the best way to do so. But it doesn't matter much since it does work.
 
@@ -26,9 +26,9 @@ This way of generating `raw` might not be the best way to do so. But it doesn't 
 
 ---
 
-Here is the javascript code that used to do the whole thing.
+Here is the javascript code that is used to do the whole thing.
 
-Assume step 1 and step 2 is done.
+Assume step 1 and step 2 are done.
 
 ```
 const raw = await MixinClient.makeCollectibleTransactionRaw({
@@ -44,17 +44,17 @@ const createRes = await createCollectibleRequest(
   raw,
 );
 
-// This url is used for user to scan to create a collectible request.
+// This url is used for users to scan to create a collectible request.
 const url = `https://mixin.one/codes/${createRes.code_id}`;
 
-// After the user paid, the step 4 is done. We need to loop UTXO and send mainnet transaction.
+// After the user paid, step 4 is done. We need to loop UTXO and send mainnet transaction.
 ```
 
 ```
 // Loop UTXO and send TX
 async loopPaymentState(output) {
-  const JWTtoken; // replace with yours method
-  const userID;   // replace with yours method
+  const JWTtoken; // replace with your method
+  const userID;   // replace with your method
   while (true) {
     await this.getPaymentState(output, userID, JWTtoken);
     await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -93,4 +93,4 @@ const hashMembers = (ids) => {
 
 ```
 
-That's about it! If you have any question, leave in the comment down below.
+That's about it! If you have any questions, leave a comment down below.
