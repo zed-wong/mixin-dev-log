@@ -23,7 +23,6 @@ This way of generating `raw` might not be the best way to do so. But it doesn't 
 
 5. Loop [Mixin API](https://developers.mixin.one/docs/api/collectibles/outputs#get-collectiblesoutputs) `GET /collectibles/outputs` with JWT token of the user and the `state` argument as `signed`. Once the output/UTXO is found. Send a mainnet transaction with the argument `raw` to accomplish the final step.
 
-
 ---
 
 Here is the javascript code that is used to do the whole thing.
@@ -90,7 +89,6 @@ const hashMembers = (ids) => {
   sha.update(key);
   return sha.getHash('HEX');
 };
-
 ```
 
 That's about it! If you have any questions, leave a comment down below.
