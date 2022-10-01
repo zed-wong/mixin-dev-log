@@ -14,7 +14,6 @@ Mixin Bots
 - Deploy
   - [mnm](MixinBot/deploy/mnm.md)
   - [service (Systemd)](MixinBot/deploy/service.md)
-
 - [Basic Bot template](MixinBot/basicBotTemplate.md)
 
 Pando Leaf
@@ -28,10 +27,11 @@ NFT
 MVM
 
 - [A script for dev](MVM/mvm.py)
-- [Common problems](MVM/mvm.md)
-- [Call Contract using ethersjs](MVM/call-contract-from-ethersjs.md)
 - [Cross Network Bridge](MVM/cross-chain-bridge.md)
+- [Deploy llamapay](MVM/deploy-llamapay/README.md)
+- [Graph node docker](MVM/graph-node-docker.md)
+- [Graph node offical](MVM/graph-node-offical.md) 
 
 ## Contact
 
-[Mixin Messenger](https://mixin.one/mm): 28865
+[Mixin](https://mixin.one/mm) me 28865
