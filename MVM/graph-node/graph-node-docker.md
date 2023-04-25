@@ -6,6 +6,8 @@ https://medium.com/coinmonks/deploy-subgraphs-to-any-evm-aaaccc3559f
 1. git clone GRAPH-NODE
 
 2. install docker
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-22-04
 
 3. edit graph-node/docker/docker-compose.yml
 
