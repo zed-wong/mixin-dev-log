@@ -13,9 +13,12 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-c
 
 Keep mainnet, replace RPC with yours
 
-4. ./setup.sh
+4. cd docker && chmod +x setup.sh && ./setup.sh
 
-5. docker-compose up
+5. (change all docker-compose to docker compose in setup.sh) docker compose up
+
+6. Set up nginx to enable https
+https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-22-04
 
 The setup of the node is done. Then try to deploy a subgraph to it.
 
